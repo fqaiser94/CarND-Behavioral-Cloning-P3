@@ -1,3 +1,6 @@
+# run using the following cmd
+# sudo python3 drive.py model.h5 /Desktop/run1
+
 import argparse
 import base64
 from datetime import datetime
@@ -5,15 +8,15 @@ import os
 import shutil
 
 import numpy as np
-import socketio
-import eventlet
+import socketio # sudo pip3 install python-socketio
+import eventlet # sudo pip3 install eventlet
 import eventlet.wsgi
 from PIL import Image
-from flask import Flask
+from flask import Flask # sudo pip3 install Flask
 from io import BytesIO
 
 from keras.models import load_model
-import h5py
+import h5py # sudo pip3 install h5py
 from keras import __version__ as keras_version
 
 sio = socketio.Server()
