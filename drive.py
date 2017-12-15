@@ -1,5 +1,7 @@
 # run using the following cmd
 # sudo python3 drive.py model.h5 /Desktop/run1
+# sudo python3 drive.py model_20171214_2156.h5 /Desktop/run1
+
 
 import argparse
 import base64
