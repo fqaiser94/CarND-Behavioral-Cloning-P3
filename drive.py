@@ -1,6 +1,6 @@
 # run using the following cmd
 # sudo python3 drive.py model.h5 /Desktop/run1
-# sudo python3 drive.py model_20171215_1946.h5 /Desktop/run1
+# sudo python3 drive.py model_20171215_2020.h5 /Desktop/run1
 
 
 import argparse
