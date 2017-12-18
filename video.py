@@ -1,3 +1,6 @@
+# run using the following cmd
+# sudo python3 video.py run1
+
 from moviepy.editor import ImageSequenceClip
 import argparse
 
