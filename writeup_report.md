@@ -61,6 +61,9 @@ Although all of this helped, the critical point was when I looked at the distrib
 
 ![Histogram of steering angles][writeup_images/histogram_steering_angles.png]
 
+<img src="writeup_images/histogram_steering_angles.png" width="480" alt="Histogram of steering angles" />
+
+
 As you can see, its heavily biased towards low steering angles which corresponds to driving in a near-straight line. Naturally this bias affected my model's ability to drive a car around turns. To combat this, I sampled data (with replacement) equally from each of the bins shown in the histogram above. While this may seem drastic, this did the trick and my model was able to successfully complete a lap around simulated track after implementing this change.    
 
 #### 2. Final Model Architecture
