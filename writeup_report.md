@@ -64,9 +64,7 @@ As you can see, its heavily biased towards low steering angles which corresponds
 
 #### 2. Final Model Architecture
 
-The final model architecture (model.py lines 18-24) consisted of a convolution neural network with the following layers and layer sizes ...
-
-Here is a visualization of the architecture (note: visualizing the architecture is optional according to the project rubric)
+The final model architecture looked like this:  
 
 <img src="https://devblogs.nvidia.com/parallelforall/wp-content/uploads/2016/08/cnn-architecture-624x890.png" width="800" alt="NVIDIA Self Driving Car Architecture" />
 
@@ -74,11 +72,11 @@ For more information, see the following [link](https://devblogs.nvidia.com/paral
 
 #### 3. Creation of the Training Set & Training Process
 
-To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
+To capture good driving behavior, I recorded a number of laps on track one (forwards and backwards) using center lane driving. Here is an example image of center lane driving:
 
-![alt text][image2]
+<<img src="writeup_images/center_driving.jpg" width="800" alt="Center driving" />
 
-I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to .... These images show what a recovery looks like starting from ... :
+I also recorded the vehicle recovering from the left side and right sides of the road back to center.  These images show what a recovery looks like starting from.
 
 ![alt text][image3]
 ![alt text][image4]
@@ -86,8 +84,6 @@ I then recorded the vehicle recovering from the left side and right sides of the
 
 Then I repeated this process on track two in order to get more data points.
 
-After the collection process, I had 51,585 number of data points. I then preprocessed this data by ...
-
-I finally randomly shuffled the data set and put 20% of the data into a validation set. 
+After the collection process, I had 51,585 number of data points. I then preprocessed this data by cropping out the top half of the image. I finally randomly shuffled the data set and put 20% of the data into a validation set. 
 
 I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 5 as the MSE loss did not change much after that. I used an adam optimizer so that manually training the learning rate wasn't necessary.
