@@ -1,7 +1,7 @@
 # **Behavioral Cloning** 
 ---
 
-To see the final model's performance, click on the following [link]().  
+To see the final model's performance, click on the following [link](https://youtu.be/amtI8ZA6ElE).  
 
 ---
 ### Files Submitted & Code Quality
