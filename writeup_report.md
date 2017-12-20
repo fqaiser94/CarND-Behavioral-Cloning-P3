@@ -1,5 +1,4 @@
 # **Behavioral Cloning** 
-
 ---
 
 To see the final model's performance, click on the following [link]().  
@@ -31,9 +30,9 @@ The model.ipynb file contains the code for training and saving the convolution n
 
 #### 1. An appropriate model architecture has been employed
 
-My model consists of a convolution neural network with 3x3 filter sizes and depths between 32 and 128 (model.py lines 18-24) 
+My model consists of a convolution neural network with 5x5 or 3x3 filter sizes and depths between 34 and 64 (model.ipynb cell 27) 
 
-The model includes RELU layers to introduce nonlinearity (code line 20), and the data is normalized in the model using a Keras lambda layer (code line 18). 
+The model includes RELU layers to introduce nonlinearity, and the data is normalized in the model using a Keras lambda layer (model.ipynb cell 27, line 10). 
 
 #### 2. Attempts to reduce overfitting in the model
 
@@ -59,10 +58,7 @@ I then collected my own data to see if that would make a difference. I also star
 
 Although all of this helped, the critical point was when I looked at the distribution of the steering angles in my data.  
 
-![Histogram of steering angles][writeup_images/histogram_steering_angles.png]
-
-<img src="writeup_images/histogram_steering_angles.png" width="480" alt="Histogram of steering angles" />
-
+<img src="writeup_images/histogram_steering_angles.png" width="800" alt="Histogram of steering angles" />
 
 As you can see, its heavily biased towards low steering angles which corresponds to driving in a near-straight line. Naturally this bias affected my model's ability to drive a car around turns. To combat this, I sampled data (with replacement) equally from each of the bins shown in the histogram above. While this may seem drastic, this did the trick and my model was able to successfully complete a lap around simulated track after implementing this change.    
 
@@ -72,7 +68,9 @@ The final model architecture (model.py lines 18-24) consisted of a convolution n
 
 Here is a visualization of the architecture (note: visualizing the architecture is optional according to the project rubric)
 
-![alt text][image1]
+<img src="https://devblogs.nvidia.com/parallelforall/wp-content/uploads/2016/08/cnn-architecture-624x890.png" width="800" alt="NVIDIA Self Driving Car Architecture" />
+
+For more information, see the following [link](https://devblogs.nvidia.com/parallelforall/deep-learning-self-driving-cars/). 
 
 #### 3. Creation of the Training Set & Training Process
 
